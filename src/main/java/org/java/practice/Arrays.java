@@ -9,7 +9,7 @@ public class Arrays {
      * @return min number
      */
     public int getMinNumFromArray(int[][] numbers) {
-        return -1;
+        return -10;
     }
 
     /**
