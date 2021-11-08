@@ -29,7 +29,11 @@ public class Arrays {
      * @return sum of the numbers
      */
     public int getSumAllNumbersFromArray(int[][] numbers) {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; sum += numbers[i][j], j++) {}
+        }
+        return sum;
     }
 
     /**
