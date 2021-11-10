@@ -1,5 +1,5 @@
 package org.java.practice;
-
+import java.util.Arrays;
 public class BinarySearch {
 
     /**
@@ -7,11 +7,15 @@ public class BinarySearch {
      * Please use the algorithm of binary search.
      *
      * @param numbers already sorted array.
-     * @param num the number which you should find.
+     * @param num     the number which you should find.
      * @return the index of the number if it presents in the array or -1 if not.
      */
     public int getIndexOfElement(int[] numbers, int num) {
-        return -1;
+        int a = (Arrays.binarySearch(numbers, num));
+        if (a < 0) {
+            return -1;
+        } else {
+            return Arrays.binarySearch(numbers, num);
+        }
     }
-
 }

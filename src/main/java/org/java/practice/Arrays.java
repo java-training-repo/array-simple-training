@@ -9,7 +9,15 @@ public class Arrays {
      * @return min number
      */
     public int getMinNumFromArray(int[][] numbers) {
-        return -1;
+        int min = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                if (numbers[i][j] < min) {
+                    min = numbers[i][j];
+                }
+            }
+        }
+        return min;
     }
 
     /**
@@ -19,7 +27,15 @@ public class Arrays {
      * @return max number
      */
     public int getMaxNumFromArray(int[][] numbers) {
-        return -1;
+        int max = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                if (numbers[i][j] > max) {
+                    max = numbers[i][j];
+                }
+            }
+        }
+        return max;
     }
 
     /**
@@ -29,8 +45,15 @@ public class Arrays {
      * @return sum of the numbers
      */
     public int getSumAllNumbersFromArray(int[][] numbers) {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                sum += numbers[i][j];
+            }
+        }
+        return sum;
     }
+
 
     /**
      * You need to implement a method for getting average number of all numbers in the array.
@@ -39,7 +62,14 @@ public class Arrays {
      * @return average number of the numbers
      */
     public int getAverageNumFromArray(int[][] numbers) {
-        return -1;
+        int sum = 0;
+        int length = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                sum += numbers[i][j];
+                length++;
+            }
+        }
+        return sum / length;
     }
-
 }
