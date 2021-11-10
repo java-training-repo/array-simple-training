@@ -9,7 +9,15 @@ public class Arrays {
      * @return min number
      */
     public int getMinNumFromArray(int[][] numbers) {
-        return -1;
+        int min = numbers[0][0];
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                if (min > numbers[i][j]) {
+                    min = numbers[i][j];
+                }
+            }
+        }
+        return min;
     }
 
     /**
@@ -19,7 +27,15 @@ public class Arrays {
      * @return max number
      */
     public int getMaxNumFromArray(int[][] numbers) {
-        return -1;
+        int max = numbers[0][0];
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                if (max < numbers[i][j]) {
+                    max = numbers[i][j];
+                }
+            }
+        }
+        return max;
     }
 
     /**
@@ -29,7 +45,13 @@ public class Arrays {
      * @return sum of the numbers
      */
     public int getSumAllNumbersFromArray(int[][] numbers) {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                sum += numbers[i][j];
+            }
+        }
+        return sum;
     }
 
     /**
@@ -39,7 +61,16 @@ public class Arrays {
      * @return average number of the numbers
      */
     public int getAverageNumFromArray(int[][] numbers) {
-        return -1;
+        int sum = 0;
+        int countElements = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                sum += numbers[i][j];
+                countElements++;
+            }
+        }
+        return sum / countElements;
     }
 
 }
