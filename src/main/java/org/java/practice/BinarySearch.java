@@ -11,11 +11,11 @@ public class BinarySearch {
      * @return the index of the number if it presents in the array or -1 if not.
      */
     public int getIndexOfElement(int[] numbers, int num) {
-        int a = (Arrays.binarySearch(numbers, num));
+        int a = Arrays.binarySearch(numbers, num);
         if (a < 0) {
             return -1;
         } else {
-            return Arrays.binarySearch(numbers, num);
+            return a;
         }
     }
 }
