@@ -10,10 +10,10 @@ public class Arrays {
      */
     public int getMinNumFromArray(int[][] numbers) {
         int min = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                if (numbers[i][j] < min) {
-                    min = numbers[i][j];
+        for (int[] i : numbers) {
+            for (int j : i) {
+                if (j < min) {
+                    min = j;
                 }
             }
         }
@@ -28,10 +28,10 @@ public class Arrays {
      */
     public int getMaxNumFromArray(int[][] numbers) {
         int max = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                if (numbers[i][j] > max) {
-                    max = numbers[i][j];
+        for (int[] i : numbers) {
+            for (int j : i) {
+                if (j > max) {
+                    max = j;
                 }
             }
         }
@@ -46,9 +46,9 @@ public class Arrays {
      */
     public int getSumAllNumbersFromArray(int[][] numbers) {
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                sum += numbers[i][j];
+        for (int [] i : numbers) {
+            for (int j : i) {
+                sum += j;
             }
         }
         return sum;
@@ -64,9 +64,9 @@ public class Arrays {
     public int getAverageNumFromArray(int[][] numbers) {
         int sum = 0;
         int length = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                sum += numbers[i][j];
+        for (int[] i : numbers) {
+            for (int j : i) {
+                sum += j;
                 length++;
             }
         }
