@@ -12,10 +12,13 @@ public class BinarySearch {
      */
     public int getIndexOfElement(int[] numbers, int num) {
         int first = 0;
-        int last = numbers.length-1;
-        int position=0;
+        int last = numbers.length - 1;
+        int position;
         position = (first + last) / 2;
-        while ((numbers[position] != num) && (first <= last)) {
+        while (first <= last) {
+            if (numbers[position] == num) {
+                return position;
+            }
             if (numbers[position] > num) {
                 last = position - 1;
             } else {
@@ -23,10 +26,7 @@ public class BinarySearch {
             }
             position = (first + last) / 2;
         }
-        if (first <= last) {
-            return position;
-        }else {
-            return -1;}
+        return -1;
     }
-
 }
+

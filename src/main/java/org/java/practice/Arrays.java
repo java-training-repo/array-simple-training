@@ -10,10 +10,10 @@ public class Arrays {
      */
     public int getMinNumFromArray(int[][] numbers) {
         int min = numbers[0][0];
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                if (min > numbers[i][j]) {
-                    min = numbers[i][j];
+        for (int[] i:numbers) {
+            for (int j:i) {
+                if (min > j) {
+                    min = j;
                 }
             }
         }
@@ -28,10 +28,10 @@ public class Arrays {
      */
     public int getMaxNumFromArray(int[][] numbers) {
         int max = numbers[0][0];
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                if (max < numbers[i][j]) {
-                    max = numbers[i][j];
+        for (int[] i:numbers) {
+            for (int j:i) {
+                if (max < j) {
+                    max = j;
                 }
             }
         }
@@ -46,9 +46,9 @@ public class Arrays {
      */
     public int getSumAllNumbersFromArray(int[][] numbers) {
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                sum += numbers[i][j];
+        for (int[] i:numbers) {
+            for (int j:i) {
+                sum += j;
             }
         }
         return sum;
@@ -62,15 +62,15 @@ public class Arrays {
      */
     public int getAverageNumFromArray(int[][] numbers) {
         int sum = 0;
-        int countElements = 0;
+        int countOfElements = 0;
 
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                sum += numbers[i][j];
-                countElements++;
+        for (int[] i:numbers) {
+            countOfElements += i.length;
+            for (int j:i) {
+                sum += j;
             }
         }
-        return sum / countElements;
+        return sum / countOfElements;
     }
 
 }
